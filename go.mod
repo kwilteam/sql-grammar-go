@@ -1,4 +1,4 @@
-module sql-grammar-go
+module github.com/kwilteam/sql-grammar-go
 
 go 1.19
 
