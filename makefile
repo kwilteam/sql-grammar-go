@@ -6,4 +6,4 @@ help:
 
 build: ## generate antlr code
 	@echo Generate antlr code
-	@cd ./sql-grammar && ./generate.sh
+	@cd ./sqlgrammar && ./generate.sh

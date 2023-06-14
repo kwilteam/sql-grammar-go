@@ -1,3 +1,3 @@
 [submodule "sql-grammar"]
-	path = sql-grammar
+	path = sqlgrammar
 	url = https://github.com/kwilteam/sql-grammar
