@@ -1,4 +1,4 @@
-module sqlgrammar
+module sql-grammar-go
 
 go 1.19
 
