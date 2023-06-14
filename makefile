@@ -7,3 +7,6 @@ help:
 build: ## generate antlr code
 	@echo Generate antlr code
 	@cd ./sql-grammar && ./generate.sh Go sqlgrammar ../sqlgrammar
+
+git-sync: ## sync submodule
+	@git submodule update --remote
