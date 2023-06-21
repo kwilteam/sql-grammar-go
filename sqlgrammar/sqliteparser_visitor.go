@@ -112,8 +112,8 @@ type SQLiteParserVisitor interface {
 	// Visit a parse tree produced by SQLiteParser#column_alias.
 	VisitColumn_alias(ctx *Column_aliasContext) interface{}
 
-	// Visit a parse tree produced by SQLiteParser#keyword.
-	VisitKeyword(ctx *KeywordContext) interface{}
+	// Visit a parse tree produced by SQLiteParser#keyword_function_name.
+	VisitKeyword_function_name(ctx *Keyword_function_nameContext) interface{}
 
 	// Visit a parse tree produced by SQLiteParser#function_name.
 	VisitFunction_name(ctx *Function_nameContext) interface{}

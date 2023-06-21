@@ -147,7 +147,7 @@ func (v *BaseSQLiteParserVisitor) VisitColumn_alias(ctx *Column_aliasContext) in
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseSQLiteParserVisitor) VisitKeyword(ctx *KeywordContext) interface{} {
+func (v *BaseSQLiteParserVisitor) VisitKeyword_function_name(ctx *Keyword_function_nameContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
