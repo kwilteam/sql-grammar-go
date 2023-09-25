@@ -143,11 +143,7 @@ func (v *BaseSQLiteParserVisitor) VisitAsc_desc(ctx *Asc_descContext) interface{
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseSQLiteParserVisitor) VisitColumn_alias(ctx *Column_aliasContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
-func (v *BaseSQLiteParserVisitor) VisitKeyword_function_name(ctx *Keyword_function_nameContext) interface{} {
+func (v *BaseSQLiteParserVisitor) VisitFunction_keyword(ctx *Function_keywordContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -159,7 +155,15 @@ func (v *BaseSQLiteParserVisitor) VisitTable_name(ctx *Table_nameContext) interf
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseSQLiteParserVisitor) VisitTable_alias(ctx *Table_aliasContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseSQLiteParserVisitor) VisitColumn_name(ctx *Column_nameContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseSQLiteParserVisitor) VisitColumn_alias(ctx *Column_aliasContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -168,17 +172,5 @@ func (v *BaseSQLiteParserVisitor) VisitCollation_name(ctx *Collation_nameContext
 }
 
 func (v *BaseSQLiteParserVisitor) VisitIndex_name(ctx *Index_nameContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
-func (v *BaseSQLiteParserVisitor) VisitTable_alias(ctx *Table_aliasContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
-func (v *BaseSQLiteParserVisitor) VisitAlias(ctx *AliasContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
-func (v *BaseSQLiteParserVisitor) VisitAny_name(ctx *Any_nameContext) interface{} {
 	return v.VisitChildren(ctx)
 }

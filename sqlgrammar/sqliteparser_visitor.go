@@ -109,11 +109,8 @@ type SQLiteParserVisitor interface {
 	// Visit a parse tree produced by SQLiteParser#asc_desc.
 	VisitAsc_desc(ctx *Asc_descContext) interface{}
 
-	// Visit a parse tree produced by SQLiteParser#column_alias.
-	VisitColumn_alias(ctx *Column_aliasContext) interface{}
-
-	// Visit a parse tree produced by SQLiteParser#keyword_function_name.
-	VisitKeyword_function_name(ctx *Keyword_function_nameContext) interface{}
+	// Visit a parse tree produced by SQLiteParser#function_keyword.
+	VisitFunction_keyword(ctx *Function_keywordContext) interface{}
 
 	// Visit a parse tree produced by SQLiteParser#function_name.
 	VisitFunction_name(ctx *Function_nameContext) interface{}
@@ -121,21 +118,18 @@ type SQLiteParserVisitor interface {
 	// Visit a parse tree produced by SQLiteParser#table_name.
 	VisitTable_name(ctx *Table_nameContext) interface{}
 
+	// Visit a parse tree produced by SQLiteParser#table_alias.
+	VisitTable_alias(ctx *Table_aliasContext) interface{}
+
 	// Visit a parse tree produced by SQLiteParser#column_name.
 	VisitColumn_name(ctx *Column_nameContext) interface{}
+
+	// Visit a parse tree produced by SQLiteParser#column_alias.
+	VisitColumn_alias(ctx *Column_aliasContext) interface{}
 
 	// Visit a parse tree produced by SQLiteParser#collation_name.
 	VisitCollation_name(ctx *Collation_nameContext) interface{}
 
 	// Visit a parse tree produced by SQLiteParser#index_name.
 	VisitIndex_name(ctx *Index_nameContext) interface{}
-
-	// Visit a parse tree produced by SQLiteParser#table_alias.
-	VisitTable_alias(ctx *Table_aliasContext) interface{}
-
-	// Visit a parse tree produced by SQLiteParser#alias.
-	VisitAlias(ctx *AliasContext) interface{}
-
-	// Visit a parse tree produced by SQLiteParser#any_name.
-	VisitAny_name(ctx *Any_nameContext) interface{}
 }
