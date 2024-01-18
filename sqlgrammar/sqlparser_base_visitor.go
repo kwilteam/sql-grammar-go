@@ -203,7 +203,11 @@ func (v *BaseSQLParserVisitor) VisitSelect_stmt(ctx *Select_stmtContext) interfa
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseSQLParserVisitor) VisitJoin_clause(ctx *Join_clauseContext) interface{} {
+func (v *BaseSQLParserVisitor) VisitJoin_relation(ctx *Join_relationContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseSQLParserVisitor) VisitRelation(ctx *RelationContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 

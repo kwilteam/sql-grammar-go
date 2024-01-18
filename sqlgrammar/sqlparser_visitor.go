@@ -154,8 +154,11 @@ type SQLParserVisitor interface {
 	// Visit a parse tree produced by SQLParser#select_stmt.
 	VisitSelect_stmt(ctx *Select_stmtContext) interface{}
 
-	// Visit a parse tree produced by SQLParser#join_clause.
-	VisitJoin_clause(ctx *Join_clauseContext) interface{}
+	// Visit a parse tree produced by SQLParser#join_relation.
+	VisitJoin_relation(ctx *Join_relationContext) interface{}
+
+	// Visit a parse tree produced by SQLParser#relation.
+	VisitRelation(ctx *RelationContext) interface{}
 
 	// Visit a parse tree produced by SQLParser#select_core.
 	VisitSelect_core(ctx *Select_coreContext) interface{}
