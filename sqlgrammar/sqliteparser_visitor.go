@@ -34,6 +34,12 @@ type SQLiteParserVisitor interface {
 	// Visit a parse tree produced by SQLiteParser#expr.
 	VisitExpr(ctx *ExprContext) interface{}
 
+	// Visit a parse tree produced by SQLiteParser#cast_type.
+	VisitCast_type(ctx *Cast_typeContext) interface{}
+
+	// Visit a parse tree produced by SQLiteParser#type_cast.
+	VisitType_cast(ctx *Type_castContext) interface{}
+
 	// Visit a parse tree produced by SQLiteParser#literal_value.
 	VisitLiteral_value(ctx *Literal_valueContext) interface{}
 
