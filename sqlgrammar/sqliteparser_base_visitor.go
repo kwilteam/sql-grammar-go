@@ -43,6 +43,14 @@ func (v *BaseSQLiteParserVisitor) VisitExpr(ctx *ExprContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseSQLiteParserVisitor) VisitCast_type(ctx *Cast_typeContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseSQLiteParserVisitor) VisitType_cast(ctx *Type_castContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseSQLiteParserVisitor) VisitLiteral_value(ctx *Literal_valueContext) interface{} {
 	return v.VisitChildren(ctx)
 }
