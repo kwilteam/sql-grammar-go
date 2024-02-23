@@ -58,8 +58,8 @@ func sqlparserParserInit() {
 		"OF_", "ON_", "ORDER_", "OR_", "OUTER_", "RAISE_", "REPLACE_", "RETURNING_",
 		"RIGHT_", "SELECT_", "SET_", "THEN_", "TRUE_", "UNION_", "UPDATE_",
 		"USING_", "VALUES_", "WHEN_", "WHERE_", "WITH_", "IDENTIFIER", "NUMERIC_LITERAL",
-		"BIND_PARAMETER", "STRING_LITERAL", "BLOB_LITERAL", "SINGLE_LINE_COMMENT",
-		"MULTILINE_COMMENT", "SPACES", "UNEXPECTED_CHAR",
+		"BIND_PARAMETER", "STRING_LITERAL", "SINGLE_LINE_COMMENT", "MULTILINE_COMMENT",
+		"SPACES", "UNEXPECTED_CHAR",
 	}
 	staticData.RuleNames = []string{
 		"statements", "sql_stmt_list", "sql_stmt", "indexed_column", "cte_table_name",
@@ -77,7 +77,7 @@ func sqlparserParserInit() {
 	}
 	staticData.PredictionContextCache = antlr.NewPredictionContextCache()
 	staticData.serializedATN = []int32{
-		4, 1, 96, 704, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4, 7,
+		4, 1, 95, 704, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4, 7,
 		4, 2, 5, 7, 5, 2, 6, 7, 6, 2, 7, 7, 7, 2, 8, 7, 8, 2, 9, 7, 9, 2, 10, 7,
 		10, 2, 11, 7, 11, 2, 12, 7, 12, 2, 13, 7, 13, 2, 14, 7, 14, 2, 15, 7, 15,
 		2, 16, 7, 16, 2, 17, 7, 17, 2, 18, 7, 18, 2, 19, 7, 19, 2, 20, 7, 20, 2,
@@ -531,11 +531,10 @@ const (
 	SQLParserNUMERIC_LITERAL     = 89
 	SQLParserBIND_PARAMETER      = 90
 	SQLParserSTRING_LITERAL      = 91
-	SQLParserBLOB_LITERAL        = 92
-	SQLParserSINGLE_LINE_COMMENT = 93
-	SQLParserMULTILINE_COMMENT   = 94
-	SQLParserSPACES              = 95
-	SQLParserUNEXPECTED_CHAR     = 96
+	SQLParserSINGLE_LINE_COMMENT = 92
+	SQLParserMULTILINE_COMMENT   = 93
+	SQLParserSPACES              = 94
+	SQLParserUNEXPECTED_CHAR     = 95
 )
 
 // SQLParser rules.
