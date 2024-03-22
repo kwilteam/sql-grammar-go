@@ -35,6 +35,10 @@ func (v *BaseSQLParserVisitor) VisitCommon_table_stmt(ctx *Common_table_stmtCont
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseSQLParserVisitor) VisitDelete_core(ctx *Delete_coreContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseSQLParserVisitor) VisitDelete_stmt(ctx *Delete_stmtContext) interface{} {
 	return v.VisitChildren(ctx)
 }
@@ -179,6 +183,10 @@ func (v *BaseSQLParserVisitor) VisitValues_clause(ctx *Values_clauseContext) int
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseSQLParserVisitor) VisitInsert_core(ctx *Insert_coreContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseSQLParserVisitor) VisitInsert_stmt(ctx *Insert_stmtContext) interface{} {
 	return v.VisitChildren(ctx)
 }
@@ -195,7 +203,7 @@ func (v *BaseSQLParserVisitor) VisitUpsert_clause(ctx *Upsert_clauseContext) int
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseSQLParserVisitor) VisitSelect_stmt_core(ctx *Select_stmt_coreContext) interface{} {
+func (v *BaseSQLParserVisitor) VisitSelect_stmt_no_cte(ctx *Select_stmt_no_cteContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -203,7 +211,11 @@ func (v *BaseSQLParserVisitor) VisitSelect_stmt(ctx *Select_stmtContext) interfa
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseSQLParserVisitor) VisitJoin_clause(ctx *Join_clauseContext) interface{} {
+func (v *BaseSQLParserVisitor) VisitJoin_relation(ctx *Join_relationContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseSQLParserVisitor) VisitRelation(ctx *RelationContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -236,6 +248,10 @@ func (v *BaseSQLParserVisitor) VisitCompound_operator(ctx *Compound_operatorCont
 }
 
 func (v *BaseSQLParserVisitor) VisitUpdate_set_subclause(ctx *Update_set_subclauseContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseSQLParserVisitor) VisitUpdate_core(ctx *Update_coreContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 

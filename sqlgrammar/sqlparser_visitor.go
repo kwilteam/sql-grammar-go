@@ -28,6 +28,9 @@ type SQLParserVisitor interface {
 	// Visit a parse tree produced by SQLParser#common_table_stmt.
 	VisitCommon_table_stmt(ctx *Common_table_stmtContext) interface{}
 
+	// Visit a parse tree produced by SQLParser#delete_core.
+	VisitDelete_core(ctx *Delete_coreContext) interface{}
+
 	// Visit a parse tree produced by SQLParser#delete_stmt.
 	VisitDelete_stmt(ctx *Delete_stmtContext) interface{}
 
@@ -136,6 +139,9 @@ type SQLParserVisitor interface {
 	// Visit a parse tree produced by SQLParser#values_clause.
 	VisitValues_clause(ctx *Values_clauseContext) interface{}
 
+	// Visit a parse tree produced by SQLParser#insert_core.
+	VisitInsert_core(ctx *Insert_coreContext) interface{}
+
 	// Visit a parse tree produced by SQLParser#insert_stmt.
 	VisitInsert_stmt(ctx *Insert_stmtContext) interface{}
 
@@ -148,14 +154,17 @@ type SQLParserVisitor interface {
 	// Visit a parse tree produced by SQLParser#upsert_clause.
 	VisitUpsert_clause(ctx *Upsert_clauseContext) interface{}
 
-	// Visit a parse tree produced by SQLParser#select_stmt_core.
-	VisitSelect_stmt_core(ctx *Select_stmt_coreContext) interface{}
+	// Visit a parse tree produced by SQLParser#select_stmt_no_cte.
+	VisitSelect_stmt_no_cte(ctx *Select_stmt_no_cteContext) interface{}
 
 	// Visit a parse tree produced by SQLParser#select_stmt.
 	VisitSelect_stmt(ctx *Select_stmtContext) interface{}
 
-	// Visit a parse tree produced by SQLParser#join_clause.
-	VisitJoin_clause(ctx *Join_clauseContext) interface{}
+	// Visit a parse tree produced by SQLParser#join_relation.
+	VisitJoin_relation(ctx *Join_relationContext) interface{}
+
+	// Visit a parse tree produced by SQLParser#relation.
+	VisitRelation(ctx *RelationContext) interface{}
 
 	// Visit a parse tree produced by SQLParser#select_core.
 	VisitSelect_core(ctx *Select_coreContext) interface{}
@@ -180,6 +189,9 @@ type SQLParserVisitor interface {
 
 	// Visit a parse tree produced by SQLParser#update_set_subclause.
 	VisitUpdate_set_subclause(ctx *Update_set_subclauseContext) interface{}
+
+	// Visit a parse tree produced by SQLParser#update_core.
+	VisitUpdate_core(ctx *Update_coreContext) interface{}
 
 	// Visit a parse tree produced by SQLParser#update_stmt.
 	VisitUpdate_stmt(ctx *Update_stmtContext) interface{}
